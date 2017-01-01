@@ -1,8 +1,6 @@
 #!/bin/bash
 
-PWD=`pwd`
-source ${PWD}/git-prompt.sh
+PWD=$(dirname $(readlink -f $0))
+GIT_PROMPT=${PWD}/git-prompt.sh
+echo "source $GIT_PROMPT" >> ~/.bashrc
 
-PS1='[\u@\h \w$(__git_ps1 " (%s)")]\$ '
-
-echo "source ${PWD}/build.sh" >> ~/.bashrc
