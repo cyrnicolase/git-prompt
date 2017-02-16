@@ -10,7 +10,7 @@ $ sh git-prompt/build.sh
 
 edit file ~/.bashrc
 ```
-PS1='[\u@\h \w$(__git_ps1 " (\[\e[32;40m\]%s\[\e[37;40m\])")]\$ ''"]])")]'
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 ```
 
 source .bashrc file
